@@ -25,9 +25,8 @@ def recommend(movie):
 
 
 st.header('Movie Recommender System Using Machine Learning')
-# Assuming data.pkl is inside the 'artifacts' folder relative to the app.py file
-movies = pickle.load(open('artifacts/data.pkl', 'rb'))
-similarity = pickle.load(open('artifacts/similarity.7z', 'rb'))
+movies = pickle.load(open(r'C:\Users\SATISH KUMAR\OneDrive\Documents\movie data\artifacts\data.pkl', 'rb'))
+similarity = pickle.load(open(r'C:\Users\SATISH KUMAR\OneDrive\Documents\movie data\artifacts\similarity.pkl', 'rb'))
 
 
 movie_list = movies['title'].values
