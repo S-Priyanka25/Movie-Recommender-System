@@ -1,9 +1,3 @@
-'''
-Author: Bappy Ahmed
-Email: entbappy73@gmail.com
-Date: 2021-Nov-15
-'''
-
 import pickle
 import streamlit as st
 import requests
@@ -31,8 +25,9 @@ def recommend(movie):
 
 
 st.header('Movie Recommender System Using Machine Learning')
-movies = pickle.load(open('artifacts/movie_list.pkl','rb'))
-similarity = pickle.load(open('artifacts/similarity.pkl','rb'))
+movies = pickle.load(open(r'C:\Users\SATISH KUMAR\OneDrive\Documents\movie data\artifacts\data.pkl', 'rb'))
+similarity = pickle.load(open(r'C:\Users\SATISH KUMAR\OneDrive\Documents\movie data\artifacts\similarity.pkl', 'rb'))
+
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
@@ -59,4 +54,3 @@ if st.button('Show Recommendation'):
     with col5:
         st.text(recommended_movie_names[4])
         st.image(recommended_movie_posters[4])
-
